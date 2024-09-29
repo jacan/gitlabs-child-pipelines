@@ -1,0 +1,10 @@
+stages:
+  - triggers
+
+build_linux:
+  stage: triggers
+  trigger:
+    include: .linux-gitlab-ci.yml
+  rules:
+    - changes:
+      - src/*
